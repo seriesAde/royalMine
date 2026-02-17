@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'inter', sans-serif;
+}
+
+.animate-bounce-slow {
+  animation: bounce 1.5s infinite;
+}
