@@ -12,7 +12,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/royalMine/'>
       <Routes>
 
         <Route path="/" element={<Home />} />
