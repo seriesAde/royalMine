@@ -61,7 +61,7 @@ function Home() {
     };
 
     return (
-        <div className="">
+        <div>
             <Nav />
 
             <div className="md:flex md:flex-row md:items-center flex flex-col">
@@ -189,15 +189,15 @@ function Home() {
                 </div>
             </div>
             {/* property listing */}
-            <div className="px-5 mt-10 md:w-[90%] lg:w-[85%] mx-auto">
+            <div className="px-5 mt-10 w-full md:w-[90%] lg:w-[85%] mx-auto box-border ">
                 <motion.div initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
-                    viewport={{ once: true, amount: 0.2 }}>
+                    viewport={{ once: true, amount: 0.2 }} >
                     <h1 className="text-[#0F2E4F] font-bold lg:text-5xl md:text-3xl text-3xl">
                         Property Listing
                     </h1>
-                    <p className=" text-lg mt-5 w-110 lg:w-full">
+                    <p className=" text-md mt-5 w-110 lg:w-full">
                         Discover your dream home with our comprehensive Property Listing.
                     </p>
                 </motion.div>

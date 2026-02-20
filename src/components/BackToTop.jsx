@@ -23,12 +23,12 @@ export default function BackToTop() {
         <button
             onClick={scrollToTop}
             className={` 
-        fixed bottom-8 right-8 p-3 rounded-full bg-[#0F2E4F] text-white shadow-lg 
-        transition-opacity duration-300
+        fixed bottom-8 right-8 p-3 h-10 w-10 rounded-full bg-[#0F2E4F] text-white shadow-lg 
+        transition-opacity duration-00
         ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}
       `}
         >
-            <FontAwesomeIcon icon={faArrowUp} size="lg" className="animate-bounce" />
+            <FontAwesomeIcon icon={faArrowUp} size="md" className="animate-[bounce_0.5s_infinite] " />
         </button>
     );
 }

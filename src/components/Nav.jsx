@@ -43,7 +43,7 @@ function Nav() {
     return (
 
 
-        <nav className={`mx-auto px-5  shadow-lg sticky  top-0 left-0 z-10 w-full  ${scroll ? " md:scale-100 " : "md:scale-95 md:mt-5"} transition-all duration-600 ease-in-out    bg-white`}>
+        <nav className={`mx-auto px-5  shadow-xs sticky  top-0 left-0 z-10 w-full  ${scroll ? " lg:scale-100 " : "lg:scale-95 lg:mt-5"} transition-all duration-600 ease-in-out    bg-white`}>
             <div className="lg:flex justify-between min-h-18">
                 <div className="md:flex justify-between flex">
                     <NavLink
