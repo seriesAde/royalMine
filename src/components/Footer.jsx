@@ -24,7 +24,7 @@ function Footer() {
                             <Link className="h-8 w-8 border border-gray-500 text-blue-900 hover:bg-[#0f2e4f] hover:text-white transition-all duration-700 ease-in-out rounded-full flex justify-center items-center bg-white"><FontAwesomeIcon className="text-lg" icon={faTiktok} /></Link>
                         </div>
                     </ul>
-                    <ul className="text-[#0F2E4F] w-full leading-7 mt-10 md:mt-0">
+                    <ul className="text-[#0F2E4F] w-full leading-7 lg:leading-8 font-light mt-10 md:mt-0">
                         <h1 className="text-[#352F29] font-bold text-lg md:text-xl mb-5">Quick Links</h1>
                         <li className="hover:tracking-widest transition-all duration-500 ease-in-out text-md"><FontAwesomeIcon icon={faAngleRight} /><Link to="/about">about us</Link></li>
                         <li className="hover:tracking-widest transition-all duration-500 ease-in-out text-md"><FontAwesomeIcon icon={faAngleRight} /><Link to="/contact">contact us</Link></li>

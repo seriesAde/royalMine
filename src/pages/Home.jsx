@@ -1,6 +1,7 @@
 import Nav from "../components/Nav"
 import { motion } from "framer-motion"
 import condo from "../assets/condo.png"
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBath, faBed, faCheck, faCoffee, faLocation, faLocationPin, faLocationPinLock, faPhone, faRulerCombined } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
@@ -201,23 +202,22 @@ function Home() {
                         Discover your dream home with our comprehensive Property Listing.
                     </p>
                 </motion.div>
-                <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:flex-row   gap-5 mx-auto   mt-10 min-h-[300px]"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} viewport={{ once: true, amount: 0.2 }}>
-
-                    {loading ? (
-                        <div className="flex justify-center w-full ">
-                            <div className="">
-                                <ClipLoader
-                                    color="#0F2E4F"
-                                    loading={loading}
-                                    size={50}
-                                />
-                            </div>
+                {loading ? (
+                    <div className="flex justify-center w-full justify-self-center lg:cols-span-3">
+                        <div className="">
+                            <ClipLoader
+                                color="#0F2E4F"
+                                loading={loading}
+                                size={50}
+                            />
                         </div>
-                    ) :
-                        (
-                            threeProperties.map((property) => (
+                    </div>
+                ) :
+                    (
+                        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:flex-row   gap-5 mx-auto   mt-10 min-h-[300px]"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} viewport={{ once: true, amount: 0.2 }}>
+                            {threeProperties.map((property) => (
                                 <div key={property.id} className="relative group  cursor-pointer shadow-md  min-w-fit h-fit rounded-b-md">
                                     <div className="overflow-hidden rounded-t-lg relative">
                                         <img src={property.images[0]} alt="" className="rounded-t-lg group-hover:scale-110 transition-all duration-700 ease-in-out" />
@@ -241,15 +241,15 @@ function Home() {
                                     </div>
                                 </div>
                             )
-                            )
-                        )}
+                            )}
 
-                </motion.div>
+                        </motion.div>
+                    )}
                 <motion.div className="flex justify-center mt-10"
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.2 }}
                 >
-                    <button className="capitalize px-5 py-3 text-white bg-[#0F2E4F] rounded-md hover:bg-blue-400">see more</button>
+                    <Link to="/properties" className="capitalize px-5 py-3 text-white bg-[#0F2E4F] rounded-md hover:bg-blue-400">see more</Link>
                 </motion.div>
             </div>
             <div className="bg-[#B1D5FA] rounded-md p-5 w-[85%] mx-auto mt-20">
